@@ -1575,9 +1575,101 @@
             <div class="lqd-modal-foot"></div>
         </div>
     </div>
-    <a class="fixed z-100" href="#" title="Me contacter" style="bottom: 2rem; right: 2rem;" target="_blank" rel="nofollow">
-        <img src="/assets/img/w.svg" width="62">
+
+    <a class="bouton-discrod w-inline-block">
+        <div class="animation-discord">
+            <img src="/assets/img/whatsapp.png" class="logo-whatsapp" alt="">
+        </div>
     </a>
+
+    <!-- <a class="fixed z-100" title="Me contacter" style="bottom: 2rem; right: 2rem;" target="_blank" rel="nofollow">
+        <div class="animation-discord">
+            <img src="<?= HOME_PATH ?>assets/img/whatsapp.png" class="logo-whatsapp" alt="">
+        </div>
+        <img src="/assets/img/w.svg" width="62">
+    </a> -->
+
+    <style>
+        .bouton-discrod {
+            background-color: rgba(150, 150, 150, 0.2) !important;
+            backdrop-filter: blur(5px) !important;
+            width: 8vh;
+            height: 8vh;
+            z-index: 50;
+            border-radius: 500px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: fixed;
+            top: auto;
+            bottom: 7vh;
+            left: auto;
+            right: 7vw;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .animation-discord {
+            width: 65%;
+            height: 65%;
+            display: block;
+            box-sizing: border-box;
+        }
+        .animation-discord img {
+            max-width: 100%;
+            vertical-align: middle;
+            display: inline-block;
+            border: 0;
+            box-sizing: border-box;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+        @keyframes regarderAutour {
+            0%,
+            100% {
+                transform: translate(0, 0);
+                /* Centre */
+            }
+
+            12.5% {
+                transform: translate(-10px, -10px);
+                /* Nord-ouest */
+            }
+
+            25% {
+                transform: translate(0, 0);
+                /* Centre */
+            }
+
+            37.5% {
+                transform: translate(-10px, 10px);
+                /* Sud-ouest */
+            }
+
+            50% {
+                transform: translate(0, 0);
+                /* Centre */
+            }
+
+            62.5% {
+                transform: translate(10px, 10px);
+                /* Sud-est */
+            }
+
+            75% {
+                transform: translate(0, 0);
+                /* Centre */
+            }
+
+            87.5% {
+                transform: translate(10px, -10px);
+                /* Nord-est */
+            }
+        }
+
+        .logo-whatsapp {
+            animation: regarderAutour 12s infinite;
+        }
+    </style>
 
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery-ui.min.js"></script>
